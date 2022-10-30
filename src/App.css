@@ -1,0 +1,17 @@
+:root{
+    --orange:#e8aa42;
+    --black:#130d33;
+    --purple:#231955;
+    --blue:#1f4690;
+    --light:#ffe584;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    /* user-zoom: none; */
+    /* overflow-x: hidden; */
+    /* width: 10vw; */
+}

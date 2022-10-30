@@ -1,0 +1,14 @@
+.ProductsMainSection{
+    width: 100%;
+    height: 43rem;
+}
+
+.ShowCaseSection{
+    width: 100%;
+    /* overflow-y: scroll; */
+    height: 40rem;
+}
+
+.line{
+    height: 40rem;
+}

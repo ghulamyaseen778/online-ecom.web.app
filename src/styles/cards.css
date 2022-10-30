@@ -1,0 +1,28 @@
+:root{
+    --orange:#e8aa42;
+    --black:#130d33;
+    --purple:#231955;
+    --blue:#1f4690;
+    --light:#ffe584;
+    --light2:#fff8dd;
+}
+
+.CardItemBox{
+    max-width: 250px;
+    height: 240px;
+    background-color: var(--orange);
+}
+
+.CardItemBox img{
+    width: 250px;
+    height: 150px;
+}
+
+.ItemCategoryTag{
+    color: var(--purple);
+}
+
+.CardItemBox:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px ;
+}
+

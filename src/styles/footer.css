@@ -1,0 +1,39 @@
+:root{
+    --orange:#e8aa42;
+    --black:#130d33;
+    --purple:#231955;
+    --blue:#1f4690;
+    --light:#ffe584;
+}
+
+.footerMAinSection{
+    width: 100%;
+    height: 10rem;
+    background-color: var(--black);
+}
+
+.footerSectionPages{
+    width: 30%;
+}
+
+.footerSectionLinks{
+    width: 30%;
+}
+
+.footerSectionContacts{
+    width: 30%;
+}
+
+.footerCombine{
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+
+.FooterHeadingSection{
+    color: var(--blue);
+}
+
+.FooterCopyRight{
+    color: var(--purple);
+}

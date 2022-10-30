@@ -1,0 +1,34 @@
+:root{
+    --orange:#e8aa42;
+    --black:#130d33;
+    --purple:#231955;
+    --blue:#1f4690;
+    --light:#ffe584;
+}
+
+.MAinSection{
+    width: 100%;
+    height: 60vh;
+    background-color: var(--light);
+}
+
+.section-1{
+    width: 40vw;
+}
+
+.section-2{
+    width: 40vw;
+}
+
+.MainImgHomePAgeImg{
+    width: 80%;
+    height: 50vh;
+}
+
+.section-1 > h1{
+    font-size: 50px;
+    font-family: 'Fasthand', cursive;
+}
+.section-1 > h2{
+    font-family: 'Oswald', sans-serif;
+}
