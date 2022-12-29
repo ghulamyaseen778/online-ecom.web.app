@@ -1,6 +1,6 @@
 .uploaderMainSection{
     width: 100%;
-    height: 50rem;
+    /* height: 50rem; */
 }
 
 .uploadingHeadingSection{
@@ -9,7 +9,7 @@
 
 .UploadFormSection{
 width: 100%;
-height: 20rem;
+/* height: 20rem; */
 }
 
 .textareForm{
@@ -18,7 +18,7 @@ height: 20rem;
 
 .showStautsOfProduct{
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
     overflow-y: scroll;
 }
 

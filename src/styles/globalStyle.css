@@ -159,7 +159,8 @@ font-family: 'Oswald', sans-serif; */
 .in-fi-all{
     outline: none;
     border: none;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
+    background-color: rgb(216, 214, 214);
 }
 
 .f-s{

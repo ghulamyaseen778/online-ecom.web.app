@@ -29,7 +29,6 @@ const MainCmp = () => {
             <h2 className='text-col'>by OnlineBazzar</h2>
             <div className="d-f a-i-c m-t1">
                 <button className='btn3 pd-bt bold b-r c-p'onClick={()=>navigate("/products")}>Our Products</button>
-                <button className='btn4 pd-bt mg-l2 bold b-r c-p'onClick={()=>navigate("/cart")}>Cart</button>
             </div>
         </div>
         <div className="section-2"><img src={MainCmpImg1} alt="" className='MainImgHomePAgeImg' /></div>

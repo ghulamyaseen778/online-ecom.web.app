@@ -28,7 +28,7 @@ const ProductsCmponent = () => {
                             // console.log(e) 
                             return(
                                 
-                                <CardCmp title={e.ProductTitle} price={e.ProductPrice} Category={e.Options}  img={e.ProductUrl} key={i}/>
+                                <CardCmp title={e.data().ProductTitle} price={e.data().ProductPrice} Category={e.data().Options}  img={e.data().ProductUrl} key={i} id={e.id}/>
                                 )
 
                         })

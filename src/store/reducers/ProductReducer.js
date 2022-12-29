@@ -7,7 +7,8 @@ const INTIALSTATE ={
 
     //product
 
-    products:[]
+    products:[],
+    SingalProduct:{}
 }
 
 const GetUserData = (state=INTIALSTATE,action) => {
@@ -31,6 +32,14 @@ const GetUserData = (state=INTIALSTATE,action) => {
             return{
                 ...state,
                 products:[...action.payload],
+                dataLoading: false,
+                // bool:true
+            }
+        case ActionTypes.SINGAL_PRODUCTS:
+            // console.log(action.payload)
+            return{
+                ...state,
+                SingalProduct:action.payload,
                 dataLoading: false,
                 // bool:true
             }

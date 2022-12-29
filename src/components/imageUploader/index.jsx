@@ -25,27 +25,31 @@ const ImageUploader = () => {
   
   const UploadAndsubmitForm = async (e) =>{
     e.preventDefault()
-    if(ImageUpload!=""&&Options!=""&&ProductPrice!=""&&productDescription!=""&&ProductTitle!=""){
+    if(Options!=""&&ProductPrice!=""&&productDescription!=""&&ProductTitle!=""){
+      
     const storageRef = ref(Storage,`images/${ImageUpload.name}`)
       // console.log(ImageUpload.name)
-      uploadBytes(storageRef,ImageUpload).then((snap)=>{
-        console.log("success")
-        getDownloadURL(storageRef).then((url)=>{
-          SetUrl(url)
+      await uploadBytes(storageRef,ImageUpload).then(async(snap)=>{
+        console.log(snap)
+        await getDownloadURL(storageRef)
+       .then((url)=>{
+         addDoc(productData,{
+            Options,
+            ProductPrice,
+            ProductTitle,
+            productDescription,
+            ProductUrl:url,
+            status:false,
+          })
+          
         })
-      })
+      }) 
+      // console.log(ProductObj)
 
       // console.log(URl)
         
         
-      await addDoc(productData,{
-        Options,
-        ProductPrice,
-        ProductTitle,
-        productDescription,
-        ProductUrl:URl,
-        status:false
-      })
+      
           // console.log(ProductObj)
         
     }
@@ -60,9 +64,9 @@ const ImageUploader = () => {
       <div className="UploadFormSection d-f a-i-c j-c-c">
         <form className='d-f j-c-sb a-i-c f-d-c'> 
           
-        <input type="text" placeholder='Enter Your Product Name' className='in-fi-all m-t1 f-s' required onChange={(e)=>SetProductTitle(e.target.value)}/>
+        <input type="text" placeholder='Enter Your Product Name' className='in-fi-all pd-bt m-t1 f-s b-r' required onChange={(e)=>SetProductTitle(e.target.value)}/>
         <input type="file" name="file" id="file" required className='m-t1' onChange={(e)=>SetImageUpload(e.target.files[0])}/>
-        <input type="text" placeholder='Enter Your Product Price' className='in-fi-all m-t1 f-s' required onChange={(e)=>SetProductPrice(e.target.value)}/>
+        <input type="text" placeholder='Enter Your Product Price' className='in-fi-all pd-bt m-t1 f-s b-r' required onChange={(e)=>SetProductPrice(e.target.value)}/>
         <select name="selected" id="select" className='m-t1' required onChange={(e)=>SetOptions(e.target.value)}>
           <option value="Mobile">Mobile</option>
           <option value="Shoes">Shoes</option>
@@ -73,13 +77,6 @@ const ImageUploader = () => {
         <textarea name="Textarea" id="" cols="30" rows="10" placeholder='Enter Product Description' required className='textareForm m-t1' onChange={(e)=>SetProductDescription(e.target.value)}></textarea>
         <button className='m-t1 pd-bt bold btn2 c-p b-r' onClick={UploadAndsubmitForm}>Submit Product</button>
         </form>
-        </div>
-        <div className="showStautsOfProduct d-f j-c-c a-i-c f-d-c">
-          <h2>Product Details</h2>
-          <div className="show d-f a-i-c j-c-sa b-r m-t2">
-            <p className="productNameSectionOfUser">Glaxy#209</p>
-            <p className="StautsISNotOrTrue">Status:<span className='bold'>Pending</span></p>
-          </div>
         </div>
       </div>
     </>

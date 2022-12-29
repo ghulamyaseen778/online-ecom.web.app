@@ -52,8 +52,8 @@ const LoginCmp = () => {
             <div className="LoginBoxHeading">
                 <h1>Login</h1>
             </div>
-            <input type="text" placeholder='Enter Your Email...' className='in-fi-all pd-bt m-t1 f-s' onChange={(e) => SetEmail(e.target.value)}/>
-            <input type="password" placeholder='Enter Your Password'className='in-fi-all pd-bt m-t1 f-s'onChange={(e) => SetPassword(e.target.value)}/>
+            <input type="text" placeholder='Enter Your Email...' className='in-fi-all pd-bt m-t1 f-s b-r' onChange={(e) => SetEmail(e.target.value)}/>
+            <input type="password" placeholder='Enter Your Password'className='in-fi-all pd-bt m-t1 f-s b-r'onChange={(e) => SetPassword(e.target.value)}/>
         </div>
         <button className='btn4 pd-bt mg-l2 bold b-r c-p m-t1' onClick={UserPatchUpLogin}>countinue</button>
         <div className="LoginLinkSection">

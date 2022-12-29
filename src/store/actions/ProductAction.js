@@ -1,5 +1,5 @@
 import ActionTypes from '../constant'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, doc, getDocs,getDoc } from 'firebase/firestore'
 import {db} from '../../config/firbase'
 
 
@@ -40,7 +40,7 @@ const ProductsData= () =>{
     })
     const querySnapshot = await getDocs(ProductData);
     querySnapshot.forEach((doc) => {
-      ProductArr.push(doc.data())
+      ProductArr.push(doc)
       // console.log(doc.data())
     })
     dispatch({
@@ -50,4 +50,28 @@ const ProductsData= () =>{
   }
 }
 
-export {UserData,ProductsData};
+const SingalData = (id)=>{
+  const ProductData = doc(db, "Products",id)
+  // console.log(ProductData)
+
+  return async (dispatch)=>{
+    dispatch({
+      type:ActionTypes.USER_LODING
+    })
+    const querySnapshot = await getDoc(ProductData);
+    console.log(querySnapshot.data())
+    if (querySnapshot.exists()) {
+      console.log("Document data:", querySnapshot);
+      
+      dispatch({
+        type:ActionTypes.SINGAL_PRODUCTS,
+        payload:querySnapshot.data()
+      })
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  }
+}
+
+export {UserData,ProductsData,SingalData};

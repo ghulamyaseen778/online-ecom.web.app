@@ -72,9 +72,9 @@ const SignUpCmp = () => {
         <div className="SignUpBoxHeading">
           <h1>SignUp</h1>
         </div>
-        <input type="text" placeholder='Enter Your UserName...' className='in-fi-all pd-bt m-t1 f-s' value={UserName} maxLength={13} onChange={(e) => SetUserName(e.target.value)} />
-        <input type="text" placeholder='Enter Your Email...' className='in-fi-all pd-bt m-t1 f-s' value={Email} onChange={(e) => SetEmail(e.target.value)} />
-        <input type="password" placeholder='Enter Your Password' className='in-fi-all pd-bt m-t1 f-s' value={Password} onChange={(e) => SetPassword(e.target.value)} />
+        <input type="text" placeholder='Enter Your UserName...' className='in-fi-all pd-bt m-t1 f-s b-r' value={UserName} maxLength={13} onChange={(e) => SetUserName(e.target.value)} />
+        <input type="text" placeholder='Enter Your Email...' className='in-fi-all pd-bt m-t1 f-s b-r' value={Email} onChange={(e) => SetEmail(e.target.value)} />
+        <input type="password" placeholder='Enter Your Password' className='in-fi-all pd-bt m-t1 f-s b-r' value={Password} onChange={(e) => SetPassword(e.target.value)} />
       </div>
       <button className='btn4 pd-bt mg-l2 bold b-r c-p m-t1' onClick={UserPatchUpSignUp}>countinue</button>
       <div className="SignUpLinkSection">
