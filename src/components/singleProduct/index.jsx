@@ -19,14 +19,13 @@ const SingleProductCmp = () => {
   return (
     <div className="SinglePrductPageSection d-f a-i-c j-c-c">
         <div className="singleProductPageSection-1">
-            <img src={Img} alt="" />
+            <img src={SingalProduct.ProductUrl} alt="" />
         </div>
         <div className="SingleProductPAgeSection-2 d-f j-c-sa f-d-c">
-            <div className="singleTitle m-t1 bold"><h1>SingleProductPAge</h1></div>
+            <div className="singleTitle m-t1 bold"><h1>{SingalProduct.ProductTitle}</h1></div>
             <h3>By Admin</h3>
-            <div className="SingleDescription m-t1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cum iste similique eligendi est doloribus vitae, in voluptatibus et consequuntur.</div> 
-            <p className="price m-t1 bold">Rs:30000</p>
-            <p>Product No. 4990</p>
+            <div className="SingleDescription m-t1">{SingalProduct.productDescription}.</div> 
+            <p className="price m-t1 bold">Rs:{SingalProduct.ProductPrice}</p>
         </div>
     </div>
   )
